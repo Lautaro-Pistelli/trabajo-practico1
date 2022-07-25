@@ -1,0 +1,206 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif; 
+    background-color: rgb(217, 173, 247);
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.head-grid{
+    background-color: rgb(39, 9, 73);
+    display: grid;
+    grid-template-rows: 1;
+    align-items: center;
+    align-self: center;
+     grid-template-areas:
+    "a . . . c . . . b"
+}
+
+.logo-name{
+    height: 50px;
+    grid-area: a;
+    padding: 1px 0 1px 1.5;
+}
+
+.links{
+    display: flex;
+    text-decoration: none;
+    grid-area: b;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.link{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(255, 0, 128), rgb(119, 119, 221) 50%, rgb(223, 193, 193) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1000ms ease;
+}
+
+.link:hover {
+    background-position: 0 100%;
+}
+
+
+.slog{
+    grid-area: c;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+    color: rgb(233, 0, 175);
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(223, 8, 97), rgb(255, 124, 205) 50%, rgb(197, 126, 197) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 1000ms ease;
+}
+
+.slog:hover{
+    background-position: 0 100%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: thistle;
+    border-bottom: 1px solid;
+    border-color: gray;
+}
+
+a{
+    text-decoration: none;
+}
+
+.upperContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.sneakerImg{
+    width: 500px;
+    border: 1px solid;
+}
+
+.sneakerHistory{
+    text-align: justify;
+}
+
+footer{
+    background-color: rgb(39, 9, 73);
+    width: 100vw;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.footerContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.socials li{
+    margin: 20px;
+    margin-top: 0;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: rgb(255, 0, 119);
+}
+
+.footerBottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 5, 36);
+    width: 100vw;
+    padding: 15px;
+    text-align: center;
+}
+
+.footerBottom p{
+   float: left;
+   font-size: 14px;
+   word-spacing: 2px;
+   text-transform: capitalize;
+}
+
+.footerBottom p a{
+  color:#eb2470;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footerBottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 150;
+}
+
+@media only screen and (max-width:700px) {
+    .head-grid{
+        display: grid;
+        flex-direction: column;
+        grid-template-rows: 1;
+        grid-template-areas:
+        "a . . . b"
+        "c c c c c"
+    }
+    
+    .links{
+        display: flex;
+        font-size: smaller;
+        width: 145px;
+        margin-right: 15px;
+    }
+    
+    .slog{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sneakerImg{
+        width: 80vw;
+    }
+
+}
